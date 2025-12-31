@@ -1,0 +1,8 @@
+{
+  "name": "RCB IPL Scorer",
+  "short_name": "RCB Scorer",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#ff1744",
+  "background_color": "#000000"
+}

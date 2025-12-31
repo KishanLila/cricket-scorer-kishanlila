@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #000;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* STADIUM */
+.stadium {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.7), #000),
+    repeating-linear-gradient(90deg, #ff1744 0 10px, #000 10px 20px);
+  opacity: 0.25;
+  animation: move 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes move {
+  from { background-position: 0 0; }
+  to { background-position: 200px 0; }
+}
+
+.app {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  color: #ff1744;
+  text-shadow: 0 0 20px #ff1744;
+  margin-bottom: 12px;
+}
+
+/* SCORE CARD */
+.score-card {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #ff1744;
+  box-shadow: 0 0 30px #ff1744;
+  border-radius: 18px;
+  padding: 16px;
+  text-align: center;
+}
+
+.score {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 14px;
+  margin-top: 6px;
+  color: #ff8a80;
+}
+
+.target-box input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #111;
+  color: #ffea00;
+  border: none;
+  text-align: center;
+}
+
+/* CHASE */
+.chase-box { margin: 15px 0; }
+.chase-bar {
+  height: 12px;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.chase-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff1744, #ffea00);
+  transition: width 0.4s;
+}
+
+/* GRAPH */
+.graph-box {
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 14px;
+}
+
+/* WIN */
+.win-meter {
+  height: 14px;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.win-fill {
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(90deg, #ff1744, #00e676);
+  transition: width 0.4s;
+}
+
+/* LAST BALLS */
+.last-balls {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 15px 0;
+}
+.ball {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 10px currentColor;
+}
+.ball.w { color: #ff1744; }
+
+/* MATCH TYPE */
+.match-type {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.match-type button.active {
+  background: #ff1744;
+  color: #000;
+}
+
+/* BUTTONS */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+button {
+  height: 58px;
+  border-radius: 14px;
+  background: #111;
+  color: white;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 0 15px #ff1744;
+}
+.four { color: #00e676; }
+.six { color: #ffea00; }
+.wicket { color: #ff1744; }
+
+.reset {
+  width: 100%;
+  margin-top: 12px;
+  height: 52px;
+  background: linear-gradient(135deg, #ff1744, #b71c1c);
+}

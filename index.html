@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCB IPL Scorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff1744">
+</head>
+<body>
+
+<div class="stadium"></div>
+
+<div class="app">
+  <h1 class="title">RCB SCORER</h1>
+
+  <div class="score-card">
+    <div class="score">
+      <span id="runs">0</span>/<span id="wickets">0</span>
+    </div>
+
+    <div class="meta">
+      Overs: <span id="overs">0.0</span> |
+      RR: <span id="runrate">0.00</span>
+    </div>
+
+    <div class="target-box">
+      Target
+      <input type="number" id="target" placeholder="e.g. 180">
+    </div>
+
+    <div class="meta">
+      Req RR: <span id="reqrate">0.00</span>
+    </div>
+  </div>
+
+  <!-- CHASE BAR -->
+  <div class="chase-box">
+    <div class="chase-text">
+      Chase <span id="chasePercent">0%</span>
+    </div>
+    <div class="chase-bar">
+      <div class="chase-fill" id="chaseFill"></div>
+    </div>
+  </div>
+
+  <!-- GRAPH -->
+  <div class="graph-box">
+    <div class="graph-title">Runs Per Over</div>
+    <canvas id="overGraph" width="340" height="140"></canvas>
+  </div>
+
+  <!-- WIN PROBABILITY -->
+  <div class="win-box">
+    <div class="win-title">Win Probability</div>
+    <div class="win-meter">
+      <div class="win-fill" id="winFill"></div>
+    </div>
+    <div class="win-percent" id="winPercent">50%</div>
+  </div>
+
+  <!-- LAST 6 BALLS -->
+  <div class="last-balls" id="lastBalls"></div>
+
+  <!-- MATCH TYPE -->
+  <div class="match-type">
+    <button onclick="setOvers(10)">T10</button>
+    <button onclick="setOvers(20)" class="active">T20</button>
+    <button onclick="setOvers(50)">ODI</button>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <button onclick="addRun(1)">1</button>
+    <button onclick="addRun(2)">2</button>
+    <button onclick="addRun(3)">3</button>
+    <button class="four" onclick="addRun(4)">4</button>
+    <button class="six" onclick="addRun(6)">6</button>
+    <button class="wicket" onclick="addWicket()">W</button>
+  </div>
+
+  <button class="reset" onclick="resetMatch()">RESET MATCH</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
