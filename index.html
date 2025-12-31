@@ -13,16 +13,22 @@
 <div class="stadium"></div>
 
 <div class="app">
-  <h1 class="title">RCB SCORER</h1>
 
-  <div class="score-card">
-    <div class="score">
+  <!-- HEADER -->
+  <div class="header">
+    <span class="team">RCB</span>
+    <span class="match">IPL • LIVE</span>
+  </div>
+
+  <!-- SCORE -->
+  <div class="section score-card">
+    <div class="score" id="scoreAnim">
       <span id="runs">0</span>/<span id="wickets">0</span>
     </div>
 
     <div class="meta">
-      Overs: <span id="overs">0.0</span> |
-      RR: <span id="runrate">0.00</span>
+      Overs <span id="overs">0.0</span> |
+      RR <span id="runrate">0.00</span>
     </div>
 
     <div class="target-box">
@@ -31,14 +37,14 @@
     </div>
 
     <div class="meta">
-      Req RR: <span id="reqrate">0.00</span>
+      Req RR <span id="reqrate">0.00</span>
     </div>
   </div>
 
   <!-- CHASE BAR -->
-  <div class="chase-box">
+  <div class="section">
     <div class="chase-text">
-      Chase <span id="chasePercent">0%</span>
+      Chase Progress <span id="chasePercent">0%</span>
     </div>
     <div class="chase-bar">
       <div class="chase-fill" id="chaseFill"></div>
@@ -46,13 +52,13 @@
   </div>
 
   <!-- GRAPH -->
-  <div class="graph-box">
+  <div class="section">
     <div class="graph-title">Runs Per Over</div>
     <canvas id="overGraph" width="340" height="140"></canvas>
   </div>
 
   <!-- WIN PROBABILITY -->
-  <div class="win-box">
+  <div class="section">
     <div class="win-title">Win Probability</div>
     <div class="win-meter">
       <div class="win-fill" id="winFill"></div>
@@ -81,6 +87,7 @@
   </div>
 
   <button class="reset" onclick="resetMatch()">RESET MATCH</button>
+
 </div>
 
 <script src="script.js"></script>
